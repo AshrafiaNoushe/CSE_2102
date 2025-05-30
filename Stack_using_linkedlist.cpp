@@ -1,14 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 struct LinkNode{
     int data;
     LinkNode *next;
     LinkNode(int x){
         data = x;
         next = nullptr;
-    }
-    
+    } 
 };
+
 struct stackLink{
     LinkNode *top;
     int size;
@@ -46,10 +47,7 @@ struct stackLink{
         if(top==nullptr){
             return -1;
         }
-        while(top!=nullptr){
         return top->data;
-        top = top->next;
-        }
     }
     void printStack(){
         LinkNode *temp = top;
@@ -59,15 +57,18 @@ struct stackLink{
         }
     }
 };
+
 int main()
 {
 stackLink s;
 s.stackPush(10);
 s.stackPush(12);
 s.stackPush(13);
+
 cout<<"Element poped: "<<s.popStack()<<endl;
 cout<<"Stack size: "<<s.sizeStack()<<endl;
 cout<<"Is the stack empty? :"<<s.isEmpty()<<endl;
 cout<<"Stack Peak: "<<s.stackPeak()<<endl;
+
 return 0;
 }
