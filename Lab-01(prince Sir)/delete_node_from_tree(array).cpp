@@ -30,7 +30,7 @@ void dlt_node(int i, int n, int dlt, int tree[])
             // Two child
             else if (tree[2 * i + 1] != -1 && tree[2 * i + 2] != -1)
             {
-                int k = 2 * i + 2;
+                int k = 2 * i + 2;//rightmost sub
                 while (2 * k + 1 < n && tree[2 * k + 1] != -1)
                 {
                     k = 2 * k + 1;
